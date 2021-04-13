@@ -9,7 +9,7 @@
 `go` | 4999999950000000 | 00.22106300
 `python` | 4999999950000000 | 05.900153800001135
 `julia` | 5000000050000000 | 00.14259600
-
+`R` | 4999999950000000 | 1.526
 
 #### csharp
 ``` csharp
@@ -28,6 +28,26 @@ Console.WriteLine("==========================");
 Console.WriteLine("C# 테스트");
 Console.WriteLine(add);
 Console.WriteLine(ed);
+
+```
+
+#### R
+``` r
+
+add <- 0
+st <- proc.time()
+
+for(index in 0:100000000)
+{
+    add <- add + index;
+}
+
+ed <- proc.time() - st
+
+print("==========================")
+print("R 테스트")
+print(add)
+print(ed)
 
 ```
 
@@ -51,7 +71,7 @@ println(ed)
 ```
 
 #### python
-``` go
+``` python
 
 st = time.perf_counter()
 add = 0 
