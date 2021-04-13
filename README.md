@@ -13,9 +13,10 @@
 `gcc` | 4999999950000000 | 0.000000
 `nodejs` | 4999999950000000 | 0.089
 `java openjdk` | 4999999950000000 | 0.29
+`Fortran` | 5000000050000000 | 0.127355993
+`Ruby` | 4999999950000000 | 2.706298
+ |  | 
 `java` | 추가 예정 | 추가 예정
-`Ruby` | 추가 예정 | 추가 예정
-`Fortran` | 추가 예정 | 추가 예정
 `Pascal` | 추가 예정 | 추가 예정
 `COBOL` | 추가 예정 | 추가 예정
 `assembly` | 추가 예정 | 추가 예정
@@ -150,5 +151,49 @@ console.log("==========================")
 console.log("nodejs 테스트")
 console.log(add);
 console.log(ed / 1000);
+
+```
+
+#### fortran
+``` fortran
+
+IMPLICIT NONE
+
+real :: start, finish
+character*10 b(3)
+INTEGER*8   :: index
+INTEGER*8   :: sum
+
+call date_and_time(b(1), b(2), b(3))
+call cpu_time(start)
+
+    DO index = 0, 100000000, 1
+        sum = sum + index
+    END DO
+
+call cpu_time(finish)
+
+write(*,*) '=========================='
+write(*,*) 'fortran 테스트'
+write(*,*) 'sum =', sum
+write(*,*) 'sum =', finish - start
+
+```
+
+#### ruby
+``` ruby
+
+sum = 0
+st = Time.now
+for index in 0...100000000
+    sum = sum + index 
+end
+
+ed = Time.now - st
+
+puts "=========================="
+puts "ruby 테스트"
+puts sum
+puts ed
 
 ```
