@@ -1,6 +1,17 @@
 # language-benchmarking
 언어별 테스트
 
+#### 언어별 속도
+
+언어 | 값 | 속도
+---|:---:|---:
+`csharp` | 4999999950000000 | 00.1753282
+`go` | 4999999950000000 | 00.22106300
+`python` | 4999999950000000 | 05.900153800001135
+`julia` | 5000000050000000 | 00.14259600
+
+
+#### csharp
 ``` csharp
 
 long add = 0;
@@ -20,6 +31,7 @@ Console.WriteLine(ed);
 
 ```
 
+#### go
 ``` go
 
 add := 0
@@ -38,6 +50,7 @@ println(ed)
 
 ```
 
+#### python
 ``` go
 
 st = time.perf_counter()
@@ -55,6 +68,7 @@ print(en)
 
 ```
 
+#### julia
 ``` julia
 
 add::Int64 = 0
