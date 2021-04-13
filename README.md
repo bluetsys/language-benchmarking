@@ -10,11 +10,10 @@
 `python` | 4999999950000000 | 05.900153800001135
 `julia` | 5000000050000000 | 00.14259600
 `R` | 4999999950000000 | 1.526
-`BCC` | 추가 예정 | 추가 예정
-`GCC` | 추가 예정 | 추가 예정
-`nodejs` | 추가 예정 | 추가 예정
+`gcc` | 4999999950000000 | 0.000000
+`nodejs` | 4999999950000000 | 0.089
+`java openjdk` | 4999999950000000 | 0.29
 `java` | 추가 예정 | 추가 예정
-`java openjdk` | 추가 예정 | 추가 예정
 `Ruby` | 추가 예정 | 추가 예정
 `Fortran` | 추가 예정 | 추가 예정
 `Pascal` | 추가 예정 | 추가 예정
@@ -112,5 +111,44 @@ println("==========================")
 println("julia 테스트")
 println(add)
 println(time_ns() - st)
+
+```
+
+#### java
+``` java
+
+long add = 0;
+long st = System.currentTimeMillis();
+
+for (int index = 0; index < 100000000; index++)
+{
+    add = add + index;
+}
+
+long ed = System.currentTimeMillis() - st;
+
+System.out.printf("==========================\r\n");
+System.out.printf("java\r\n");
+System.out.printf("%d\r\n", add);
+System.out.printf("0.%d\r\n", ed);
+
+```
+
+#### nodejs, javascript
+``` javascript
+
+var add = 0;
+var st = Date.now();
+
+for (var index = 0; index < 100000000; index++) {
+    add = add + index;
+}
+
+var ed = Date.now() - st;
+
+console.log("==========================")
+console.log("nodejs 테스트")
+console.log(add);
+console.log(ed / 1000);
 
 ```
