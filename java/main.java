@@ -5,7 +5,7 @@ class main {
       long add = 0;
       long st = System.currentTimeMillis();
 
-      for (int index = 0; index < 100000000; index++)
+      for (int index = 0; index <= 100000000; index++)
       {
           add = add + index;
       }
