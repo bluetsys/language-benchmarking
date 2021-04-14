@@ -1,6 +1,6 @@
 sum = 0
 st = Time.now
-for index in 0...100000000
+for index in 0...100000001
     sum = sum + index 
 end
 
