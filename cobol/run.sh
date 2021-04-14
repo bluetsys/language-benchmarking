@@ -1,0 +1,1 @@
+cobc -x -free ./cobol/*.cobc -o ./main.bin && ./main.bin
