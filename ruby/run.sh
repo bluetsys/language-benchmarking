@@ -1,0 +1,1 @@
+ruby ./ruby/main.ru

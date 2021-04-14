@@ -13,7 +13,14 @@ class main {
       long ed = System.currentTimeMillis() - st;
 
       System.out.printf("==========================\r\n");
-      System.out.printf("java\r\n");
+      if( args.length == 0)
+      {
+        System.out.printf("java\r\n");
+      }
+      else
+      {
+        System.out.printf("java - %s\r\n", args[0]);
+      }
       System.out.printf("%d\r\n", add);
       System.out.printf("0.%d\r\n", ed);
     }
