@@ -11,6 +11,7 @@
 *.sln.docstates
 *.out
 *.tar.gz
+*.bin
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
