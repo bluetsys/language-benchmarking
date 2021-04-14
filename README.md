@@ -15,11 +15,11 @@
 `java openjdk` | 4999999950000000 | 0.29
 `Fortran` | 5000000050000000 | 0.127355993
 `Ruby` | 4999999950000000 | 2.706298
+`assembly` | 5000000050000000 | 0.000000
  |  | 
 `java` | 추가 예정 | 추가 예정
 `Pascal` | 추가 예정 | 추가 예정
 `COBOL` | 추가 예정 | 추가 예정
-`assembly` | 추가 예정 | 추가 예정
 
 #### csharp
 ``` csharp
@@ -195,5 +195,32 @@ puts "=========================="
 puts "ruby 테스트"
 puts sum
 puts ed
+
+```
+
+#### assembly
+``` assembly
+
+GLOBAL  main
+EXTERN  printf
+
+SECTION .text
+main:
+	MOV ECX, 100000000
+	XOR rax, rax
+	XOR rbx, rbx
+
+do:
+	INC rax
+	ADD rbx, rax
+
+    LOOP do
+
+	LEA     rdi, [format]
+	MOV     rdi, format             ; 파라메타1
+	MOV     rsi, rbx                ; 파라메타2
+	CALL    printf
+
+format: DB  "%ld", 10, 0
 
 ```
