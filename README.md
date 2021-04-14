@@ -1,6 +1,9 @@
 # language-benchmarking
 언어별 테스트
 
+## 설명
+테스트는 1번씩 진행한 결과라서 실제 결과와 다를 수 있습니다.
+
 #### 언어별 속도
 
 언어 | 값 | 속도
@@ -21,13 +24,17 @@
 `Pascal` | 추가 예정 | 추가 예정
 `COBOL` | 추가 예정 | 추가 예정
 
+#### 그래픽
+![리스트 화면](/Images/KakaoTalk_20210414_104626720.png)
+제공 샤이니 코리아 사용자 모임 [옥 ･ั﹏･ั]님 제공
+
 #### csharp
 ``` csharp
 
 long add = 0;
 var st = System.DateTime.Now;
 
-for (int index = 0; index < 100000000; index++)
+for (int index = 0; index <= 100000000; index++)
 {
     add = add + index;
 }
@@ -67,7 +74,7 @@ print(ed)
 add := 0
 st := time.Now()
 
-for i := 0; i < 100000000; i++ {
+for i := 0; i <= 100000000; i++ {
     add = add + i
 }
 
@@ -121,7 +128,7 @@ println(time_ns() - st)
 long add = 0;
 long st = System.currentTimeMillis();
 
-for (int index = 0; index < 100000000; index++)
+for (int index = 0; index <= 100000000; index++)
 {
     add = add + index;
 }
@@ -141,7 +148,7 @@ System.out.printf("0.%d\r\n", ed);
 var add = 0;
 var st = Date.now();
 
-for (var index = 0; index < 100000000; index++) {
+for (var index = 0; index <= 100000000; index++) {
     add = add + index;
 }
 
@@ -185,7 +192,7 @@ write(*,*) 'sum =', finish - start
 
 sum = 0
 st = Time.now
-for index in 0...100000000
+for index in 0...100000001
     sum = sum + index 
 end
 
@@ -217,10 +224,16 @@ do:
     LOOP do
 
 	LEA     rdi, [format]
-	MOV     rdi, format             ; 파라메타1
-	MOV     rsi, rbx                ; 파라메타2
+	MOV     rdi, format					; 파라메타1
+	MOV     rsi, split					; 파라메타2
+	MOV     rdx, title					; 파라메타3
+	MOV     rcx, rbx					; 파라메타4
+	XOR		rax, rax
 	CALL    printf
 
-format: DB  "%ld", 10, 0
+SECTION .data
+	format: 	DB 	"%s%s%ld", 10, 0
+	split: 		DB 	"==========================", 10, 0
+	title: 		DB 	"assembly 테스트", 10, 0
 
 ```
