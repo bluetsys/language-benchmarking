@@ -14,8 +14,14 @@ do:
     LOOP do
 
 	LEA     rdi, [format]
-	MOV     rdi, format             ; 파라메타1
-	MOV     rsi, rbx                ; 파라메타2
+	MOV     rdi, format					; 파라메타1
+	MOV     rsi, split					; 파라메타2
+	MOV     rdx, title					; 파라메타3
+	MOV     rcx, rbx					; 파라메타4
+	XOR		rax, rax
 	CALL    printf
 
-format: DB  "%ld", 10, 0
+SECTION .data
+	format: 	DB 	"%s%s%ld", 10, 0
+	split: 		DB 	"==========================", 10, 0
+	title: 		DB 	"assembly 테스트", 10, 0
