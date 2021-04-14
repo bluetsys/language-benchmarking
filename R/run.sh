@@ -1,1 +1,1 @@
-Rscript ./R/r.r
+Rscript --no-echo ./R/r.r

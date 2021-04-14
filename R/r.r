@@ -8,7 +8,7 @@ for(index in 0:100000001)
 
 ed <- proc.time() - st
 
-print("==========================")
-print("R 테스트")
-print(add)
+message("==========================")
+message("R 테스트")
+message(add)
 print(ed)
