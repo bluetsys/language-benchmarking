@@ -1,7 +1,7 @@
 var add = 0;
 var st = Date.now();
 
-for (var index = 0; index < 100000000; index++) {
+for (var index = 0; index <= 100000000; index++) {
     add = add + index;
 }
 
