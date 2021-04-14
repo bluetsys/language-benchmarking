@@ -34,3 +34,4 @@
 ./csharp/run.sh
 ./assembly/run.sh
 ./C/run.sh
+./pascal/run.sh
