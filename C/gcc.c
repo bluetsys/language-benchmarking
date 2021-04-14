@@ -5,7 +5,7 @@ int main()
 {
     long add = 0;
     time_t st = time(NULL);
-    for (long index = 0; index < 100000000; index++)
+    for (long index = 0; index <= 100000000; index++)
     {
         add = add + index;
     }
