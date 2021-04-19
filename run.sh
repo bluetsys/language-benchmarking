@@ -19,19 +19,19 @@
 #     esac
 # done
 
-./nodejs/run.sh
-./R/run.sh
-./python/run.sh
-./basic/yabasic.sh
-./go/run.sh
+sudo ./nodejs/run.sh
+sudo ./R/run.sh
+sudo ./python/run.sh
+sudo ./basic/yabasic.sh
+sudo ./go/run.sh
 
-./java/run.sh
-./julia/run.sh
-./ruby/run.sh
-./fortran/run.sh
-./cobol/run.sh
+sudo ./java/run.sh
+sudo ./julia/run.sh
+sudo ./ruby/run.sh
+sudo ./fortran/run.sh
+sudo ./cobol/run.sh
 
-./csharp/run.sh
-./assembly/run.sh
-./C/run.sh
-./pascal/run.sh
+sudo ./csharp/run.sh
+sudo ./assembly/run.sh
+sudo ./C/run.sh
+sudo ./pascal/run.sh
